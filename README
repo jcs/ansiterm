@@ -1,0 +1,18 @@
+a proper setup for viewing ANSI art in xterm.
+
+includes dos437, a BDF pixel-for-pixel translation of the DOS 437 codepage
+font.
+
+to use, convert the BDF font to a PCF font (if necessary) and then install it:
+	- bdftopcf dos437.bdf > fonts/dos437.pcf
+	- sudo cp fonts/dos437.pcf /usr/X11R6/lib/X11/fonts/misc/
+	- cd /usr/X11R6/lib/X11/fonts/misc/; sudo mkfontdir
+
+run ansiterm:
+	- sh ansiterm.sh
+
+for tiling window managers, make sure the resulting xterm window is exactly 80
+characters wide.
+
+cat some ANSI art:
+	- cat acid-100/lorez/GO-EAST.ANS
