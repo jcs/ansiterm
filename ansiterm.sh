@@ -1,8 +1,9 @@
 # colors 0-7 are black, red, green, yellow, blue, magenta, cyan, gray
 # colors 8-15 are bold versions
 
-xterm \
+env LANG= xterm \
 	-g 80x24 \
+	-tn ansi \
 	-fn dos437 \
 	-bg black \
 	-fg "#aaaaaa" \
